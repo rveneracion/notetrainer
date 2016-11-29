@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<span id="button_nextsound">Chord Next</span>
+<span id="button_donesound">Chord Done</span>
+<span id="button_mysound">Chord My Sound</span>
+{% endblock %}
+{% block script %}
+$(document).ready(function(){
+    sound_dict = {
+        "next": "/static/sounds/chord_next.mp3",
+        "done": "/static/sounds/chord_done.mp3"
+    };
+    $("#button_nextsound").button().click(function(){
+        playsound("next");
+    });
+    $("#button_donesound").button().click(function(){
+        playsound("done");
+    });
+    $("#button_mysound").button().click(function(){
+        playsound("done");
+    });
+
+});
+
+function playsound(whichsound){
+    var playme = new Audio();
+    playme.src = sound_dict[whichsound];
+    playme.play();
+}
+
+
+{% endblock %}

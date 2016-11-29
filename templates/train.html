@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="main">
+    <div id="background">
+        <div id="content"> 
+            <div id="div_showphrase">
+            <h1 id="changeme">Getting Data</h1>
+            </div>
+            <div id="div_showcontrols">
+                <label id="label_spinner_howmany" >Select how many turns you would like:</label> 
+                <input id="spinner_howmany" value = "5"></input>
+                <br>
+                <label id="label_spinner_interval" >Select interval per character (milliseconds):</label> 
+                <input id="spinner_interval" value = "500"></input>
+            </div>
+            <div id="div_showresults">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block script %}
+<script src="/static/js/train.js"></script>
+    {% endblock %}

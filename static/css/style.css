@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Allura;
+    src: url(/static/fonts/Allura-Regular.ttf);
+}
+
+body {
+}
+
+div#main{
+    width: 100%;
+    background-color: #8d9db6;
+}
+
+div#content{
+    width: 1024px;
+    margin: 0 auto;
+    background-color: #f1e3dd;
+    color: #667292;
+    text-align: center;
+}
+
+#changeme {
+    font-family: Allura;
+    color: purple;
+    font-size: 40pt;
+}
+#button_start {
+    font-size: 25pt;
+}
+#spinner_howmany {
+    width: 25px;
+}
+
+#spinner_howmany {
+    width: 50px;
+}
