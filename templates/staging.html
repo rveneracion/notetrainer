@@ -1,7 +1,17 @@
 {% extends "foundationbase.html" %}
 {% block content %}
-<div class="row">
-    <div class="fullscreen">this is a fullscreen div</div>
+<div class="row column text-center">
+    <div id="orbit-wrapper">
+        <h1>Get your pen and paper ready...</h1>
+    </div>
+    <hr/>
 </div>
+<div class="row column text-center button-group" id="controls">
+        <button class="button" onclick="getPhrases(phrasecount)">Start</button>
+        <button class="button" onclick="clearOrbit()">Stop</button>
+        <hr/>
+</div>
+<script>
+</script>
 {% endblock %}
 

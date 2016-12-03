@@ -1,0 +1,14 @@
+<div class="orbit" data-orbit data-infinite-wrap="false">
+    <ul class="orbit-container">
+        {% for phrase in phraselist %}
+        <li class="orbit-slide"><h1>{{ phrase }}</h1></li>
+        {% endfor %}
+        <li class="orbit-slide">
+            <ol id="resultslist">
+                {% for phrase in phraselist %}
+                <li >{{ phrase }}</li>
+                {% endfor %}
+            </ol>
+        </li>
+    </ul>
+</div>

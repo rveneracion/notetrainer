@@ -9,7 +9,7 @@ with open('app/phraselist.txt') as pl:
 ## @app.route('/index')
 ## def index():
 ##     return render_template('index.html')
-
+##
 
 @app.route('/phrase')
 def phrase():
@@ -49,3 +49,15 @@ def foundation():
 @app.route('/staging')
 def staging():
     return render_template('staging.html')
+
+@app.route('/getphrases/<number>')
+def getphrases(number):
+    global phrases
+    n = int(number)
+    if n > 500: n = 500
+    elif n < 1: n = 1
+    random.shuffle(phrases)
+    phraselist = phrases[:n]
+
+    return render_template('slides.html', phraselist = phraselist)
+

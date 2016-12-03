@@ -1,4 +1,13 @@
-#topbar-logo {
-    height: 25px;
-    width:  25px;
+#banner {
+    height: 125px;
+}
+
+#orbit-wrapper {
+    min-height: 300px;
+}
+
+#resultslist {
+    display: table;
+    margin: 0 auto;
+    text-align: left;
 }
