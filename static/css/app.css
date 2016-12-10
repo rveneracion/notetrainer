@@ -11,3 +11,8 @@
     margin: 0 auto;
     text-align: left;
 }
+
+.phrase-slide {
+    color: navy;
+    font-weight: bold;
+}

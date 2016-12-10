@@ -1,12 +1,22 @@
-<div class="orbit" data-orbit data-infinite-wrap="false">
+<div class="orbit" 
+    data-infinite-wrap="false"
+    data-auto-play="false"
+    id="orbiter"
+    >
     <ul class="orbit-container">
+        <li class="orbit-slide is-active"><h1 id="first">Get ready to write...</h1></li>
         {% for phrase in phraselist %}
-        <li class="orbit-slide"><h1>{{ phrase }}</h1></li>
+        <li class="orbit-slide" 
+            id="phraseslide_{{ phrase[2] }}" 
+            phraselength="{{ phrase[1] }}"
+            >
+            <h1><span class=" phrase-slide">{{ phrase[0] }}</span></h1>
+        </li>
         {% endfor %}
         <li class="orbit-slide">
             <ol id="resultslist">
                 {% for phrase in phraselist %}
-                <li >{{ phrase }}</li>
+                <li >{{ phrase[0] }}</li>
                 {% endfor %}
             </ol>
         </li>

@@ -1,8 +1,31 @@
 {% extends "foundationbase.html" %}
+
+{% block sidemenu %}
+<ul class="vertical menu">
+    <li class="label menu-text secondary">Settings</li>
+    <li class="menu-text"><span>Phrase count:</span>
+    <li>
+    <div class="slider row column" data-slider data-initial-start="5" data-step="1" data-start="1" data-end="20">
+        <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="inputPhrasecount"></span>
+        <span class="slider-fill" data-slider-fill></span>
+    </div>
+    </li>
+    <li><input onchange="setPhrasecount()" id="inputPhrasecount" type="number" value="5"></li>
+    <li class="menu-text"><span>Speed:</span></li>
+    <li>
+    <div class="slider row column" data-slider data-initial-start="500" data-step="50" data-start="150" data-end="900">
+        <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
+        <span class="slider-fill" data-slider-fill></span>
+    </div>
+    </li>
+    <li><input id="sliderOutput2" type="number"></li>
+</ul>
+{% endblock %}
+
 {% block content %}
 <div class="row column text-center">
     <div id="orbit-wrapper">
-        <h1>Get your pen and paper ready...</h1>
+        <h1>Click Start to Play...</h1>
     </div>
     <hr/>
 </div>

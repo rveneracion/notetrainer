@@ -21,19 +21,25 @@
                 <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
 
                     <!-- Close button -->
+                    <!--
                     <button class="close-button" aria-label="Close menu" type="button" data-close>
                         <span aria-hidden="true">&times;</span>
                     </button>
+                    -->
 
                     <!-- Menu -->
+                    {% block sidemenu %}{% endblock %}
+<!--
                     <ul class="vertical menu">
-                        <li><a href="#">Foundation</a></li>
-                        <li><a href="#">Dot</a></li>
+                        <li class="label menu-text secondary">Settings</li>
+                        <li><label>Phrase count<input onchange="setPhrasecount()" id="inputPhrasecount" type="number" value="5"></label></li>
                         <li><a href="#">ZURB</a></li>
+                        <li class="menu-text">Links</li>
                         <li><a href="#">Com</a></li>
                         <li><a href="#">Slash</a></li>
                         <li><a href="#">Sites</a></li>
                     </ul>
+-->
 
                 </div>
 

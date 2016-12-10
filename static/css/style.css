@@ -34,3 +34,9 @@ div#content{
 #spinner_howmany {
     width: 50px;
 }
+
+#list_done {
+    text-align:left;
+    margin: 0 auto;
+    display: table;
+}
