@@ -8,6 +8,7 @@ var orbitOptions = {};
 var slideCount = 0;
 var currentSlide = 0;
 var startingCountdown = 3000;
+var timeOut = setTimeout(noFunc,0);
 
 $(document).ready(function(){
     $('.setspeed').click(function(){
@@ -15,7 +16,11 @@ $(document).ready(function(){
     });
 });
 
+function noFunc() {
+}
 function getPhrases(num) {
+    timeOut = setTimeout(noFunc,0);
+    clearTimeout(timeOut);
     slideCount = 0;
     currentSlide = 0;
     var ran = Math.floor((Math.random() * 1000000) + 1);
@@ -23,15 +28,17 @@ function getPhrases(num) {
        '/getphrases/' + num.toString() + '?ran=' + ran.toString(),
       function(data){
           $("#orbit-wrapper").html(data);
-          myorbit = new Foundation.Orbit($("#orbiter"), orbitOptions);
+          myorbiter = new Foundation.Orbit($("#orbiter"), orbitOptions);
           slideCount = $(".orbit-slide").length;
           $(document).foundation();
-          setTimeout(nextSlide, startingCountdown);
+          timeOut = setTimeout(nextSlide, startingCountdown);
       } 
     );
 }
 
 function clearOrbit() {
+    timeOut = setTimeout(noFunc,0);
+    clearTimeout(timeOut);
     slideCount = 0;
     currentSlide = 0;
     $("#orbit-wrapper").html('<h1>Click Start to play</h1>');
@@ -45,7 +52,7 @@ function nextSlide() {
     console.log("slideName: " + slideName);
     console.log("phraseLength: " + phraseLength);
     console.log("totaltime: " + totaltime);
-    myorbit.changeSlide(idx=currentSlide);
+    myorbiter.changeSlide(idx=currentSlide);
     if (currentSlide < (slideCount - 1)) {
         setTimeout(nextSlide, totaltime);
     }
