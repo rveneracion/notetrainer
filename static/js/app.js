@@ -10,6 +10,9 @@ var currentSlide = 0;
 var startingCountdown = 3000;
 
 $(document).ready(function(){
+    $('.setspeed').click(function(){
+        setSpeed(this);
+    });
 });
 
 function getPhrases(num) {
@@ -51,4 +54,11 @@ function nextSlide() {
 function setPhrasecount(){
     phrasecount = $("#inputPhrasecount").val();
     console.log("phrasecount: " + phrasecount);
+}
+
+function setSpeed(whichButton) {
+    interval = $(whichButton).attr("speed");
+    $('.setspeed').addClass('secondary');
+    $(whichButton).addClass('primary').removeClass('secondary');
+    console.log('interval: ' + interval);
 }

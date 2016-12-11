@@ -4,21 +4,25 @@
 <ul class="vertical menu">
     <li class="label menu-text secondary">Settings</li>
     <li class="menu-text"><span>Phrase count:</span>
-    <li>
-    <div class="slider row column" data-slider data-initial-start="5" data-step="1" data-start="1" data-end="20">
-        <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="inputPhrasecount"></span>
-        <span class="slider-fill" data-slider-fill></span>
-    </div>
-    </li>
     <li><input onchange="setPhrasecount()" id="inputPhrasecount" type="number" value="5"></li>
+    <li>&nbsp;</li>
     <li class="menu-text"><span>Speed:</span></li>
     <li>
-    <div class="slider row column" data-slider data-initial-start="500" data-step="50" data-start="150" data-end="900">
-        <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
-        <span class="slider-fill" data-slider-fill></span>
-    </div>
+        <div class="row text-center  button-group ">
+            <button class="setspeed button tiny secondary" speed="700"></button>
+            <button class="setspeed button tiny secondary" speed="600"></button>
+            <button class="setspeed button tiny primary" speed="500"></button>
+            <button class="setspeed button tiny secondary" speed="400"></button>
+            <button class="setspeed button tiny secondary" speed="300"></button>
+        </div>
+        <div class="row text-center">
+            Slower <------> Faster
+        </div>
     </li>
-    <li><input id="sliderOutput2" type="number"></li>
+    <li>&nbsp;</li>
+    <li></li>
+    <li></li>
+    <li></li>
 </ul>
 {% endblock %}
 

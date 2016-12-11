@@ -4,7 +4,7 @@
     id="orbiter"
     >
     <ul class="orbit-container">
-        <li class="orbit-slide is-active"><h1 id="first">Get ready to write...</h1></li>
+        <li class="orbit-slide is-active"><h1 id="getready">Get ready to write...</h1></li>
         {% for phrase in phraselist %}
         <li class="orbit-slide" 
             id="phraseslide_{{ phrase[2] }}" 
@@ -16,7 +16,7 @@
         <li class="orbit-slide">
             <ol id="resultslist">
                 {% for phrase in phraselist %}
-                <li >{{ phrase[0] }}</li>
+                <li ><h4>{{ phrase[0] }}</h4></li>
                 {% endfor %}
             </ol>
         </li>

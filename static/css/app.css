@@ -4,12 +4,19 @@
 
 #orbit-wrapper {
     min-height: 300px;
+    padding: 25px;
+    
 }
 
 #resultslist {
     display: table;
     margin: 0 auto;
     text-align: left;
+    font-weight: bold;
+}
+
+#getready {
+    color: red;
 }
 
 .phrase-slide {
