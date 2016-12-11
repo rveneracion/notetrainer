@@ -39,12 +39,7 @@ def sound():
 
 @app.route('/')
 def index():
-    return render_template('train.html')
-
-
-@app.route('/foundation')
-def foundation():
-    return render_template('foundation.html')
+    return render_template('pentrainer.html')
 
 @app.route('/staging')
 def staging():
